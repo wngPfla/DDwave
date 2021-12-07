@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <title>2조</title>
+      <meta charset="UTF-8">
+      <style>
+         body{ margin: 10px; background: #D0D0D0; }
+         #myCanvas{background:#FFF; border: #909090 1px solid; }
+        
+        div {
+  width: 120px;
+  height: 20px;
+  background: blue;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+#div1 {animation-timing-function: cubic-bezier(0,0,1,1);}
+#div2 {animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {animation-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {animation-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {animation-timing-function: cubic-bezier(0.42,0,0.58,1);}
+        
+#div6 {animation-timing-function: cubic-bezier(0,0,1,1);}
+#div7 {animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div8{animation-timing-function: cubic-bezier(0.42,0,1,1);}
+#div9 {animation-timing-function: cubic-bezier(0,0,0.58,1);}
+#div10 {animation-timing-function: cubic-bezier(0.42,0,0.58,1);}
+
+@keyframes mymove {
+  from {left: 600px;}
+  to {left: 0px;}
+  from {top: -400px;}
+  to {bottom: 400px;}
+  
+}
+      </style>
+   </head>
+   <body>
+      <canvas id="myCanvas" width="800" height="800">CANVAS를 지원하지 않습니다.</canvas>
+     <h1>바다의 언어를 감상하세요!</h1>
+     <h4>새로고침을 누르면 파도가 움직입니다~</h4>
+    <h4>새로고침을 누르지 않으면 파도의 움직이는 소리를 감상할 수 있습니다~</h4>
+    <h5>서한비(22157017),주혜림(22157036) 작업~</h5>
+
+<div id="div1">첨벙첨벙</div>
+<div id="div2">찰랑찰랑</div>
+<div id="div3">파도</div>
+<div id="div4">술렁술렁</div>
+<div id="div5">일렁일렁</div>
+     
+<div id="div6">첨벙첨벙</div>
+<div id="div7">찰랑찰랑</div>
+<div id="div8">파도</div>
+<div id="div9">술렁술렁</div>
+<div id="div10">일렁일렁</div>
+
+      <script>
+         var canvas = document.getElementById("myCanvas");
+         var ctx = canvas.getContext("2d");
+            var r,g,b,a,size;
+            var button = document.getElementById('btn-download');
+
+
+        for(var x=20; x<canvas.width; x=x+30)
+  {
+    for(var y=0; y<canvas.height; y=y+30)
+    {     
+         ctx.fillStyle="rgb(230, 255, 250)";
+         ctx.fillRect(x,y,30,20);
+      
+    }
+}
+
+
+        for(var x=0; x<canvas.width; x=x+30)
+  {
+    for(var y=17; y<canvas.height; y=y+30)
+    {     
+         ctx.fillStyle="rgb(0, 206, 209)";
+         ctx.fillRect(x,y,20,0.5);
+      
+    }
+}
+
+
+        for(var x=20; x<canvas.width; x=x+30)
+  {
+    for(var y=0; y<canvas.height; y=y+30)
+    {     
+         ctx.fillStyle="rgb(0, 206, 209)";
+         ctx.fillRect(x,y,0.7,10);
+      
+    }
+}
+
+        
+              var canvas = document.getElementById("myCanvas");
+         var ctx = canvas.getContext("2d");
+      ctx.fillStyle="red";   
+      ctx.arc(160, 130, 100, 0, Math.PI*2);
+      ctx.fill();
+
+
+
+          for (var i=0; i<800; i=i+20) {
+               r=Math.round(Math.random()*0);
+                g=Math.round(Math.random()*255);
+               b=Math.round(Math.random()*1000000);
+               a=Math.random();
+               size=Math.round(Math.random()*30+150);
+
+              
+                ctx.beginPath();
+               ctx.fillStyle="rgba("+r+","+g+","+b+","+a+")";   
+               ctx.arc(i, 3800, size, 20, Math.PI*0.6);
+               ctx.fill();
+            
+
+            
+                ctx.beginPath();
+               ctx.fillStyle="rgba(41, 172, 255,"+a+")";   
+               ctx.arc(i, 420, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+                  ctx.beginPath();
+               ctx.fillStyle="rgba(41, 172, 255,"+a+")";   
+               ctx.arc(i, 400, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+                  ctx.beginPath();
+               ctx.fillStyle="rgba("+r+","+g+","+b+","+a+")";   
+               ctx.arc(i, 450, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+            ctx.beginPath();
+               ctx.fillStyle="rgba(0, 206, 209,"+a+")";   
+               ctx.arc(i, 480, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+                 ctx.beginPath();
+               ctx.fillStyle="rgba(0, 206, 209,"+a+")";   
+               ctx.arc(i, 550, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+                     ctx.beginPath();
+               ctx.fillStyle="rgba(0, 98, 231,"+a+")";   
+               ctx.arc(i, 520, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+                        ctx.beginPath();
+               ctx.fillStyle="rgba(0, 98, 231,"+a+")";   
+               ctx.arc(i, 580, size, 20, Math.PI*0.7);
+               ctx.fill();
+                 
+                        ctx.beginPath();
+               ctx.fillStyle="rgba(0, 98, 231,"+a+")";   
+               ctx.arc(i, 620, size, 20, Math.PI*0.7);
+               ctx.fill();
+            
+          
+            
+            
+            
+              
+                ctx.beginPath();
+               ctx.fillStyle="rgba("+r+","+g+","+b+","+a+")";   
+               ctx.arc(i, 300, size, 20, Math.PI*0.5);
+               ctx.fill();
+            
+              ctx.beginPath();
+               ctx.fillStyle="rgba("+r+","+g+","+b+","+a+")";   
+               ctx.arc(i, 350, size, 20, Math.PI*0.5);
+               ctx.fill();
+
+               ctx.beginPath();
+               ctx.fillStyle="rgba("+r+","+g+","+b+","+a+")";   
+               ctx.arc(i, 290, size, 20, Math.PI*0.5);
+               ctx.fill();
+            
+            
+            
+          
+            
+     
+          }
+
+               
+      </script>
+   </body>
+</html>
